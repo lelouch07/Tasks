@@ -24,7 +24,7 @@ router.get('/user/:userId', async (req, res) => {
 // @route   GET api/machineUserMappings/logs/machine/:machineId
 // @desc    Get time logged by machine
 // @access  Public
-router.get('machine/:machineId', async (req, res) => {
+router.get('/machine/:machineId', async (req, res) => {
     try {
         const logs = await ReportOfTimeSpent.find({ MachineId: req.params.machineId });
         if (!logs) {
@@ -41,7 +41,7 @@ router.get('machine/:machineId', async (req, res) => {
 // @route   GET api/machineUserMappings/logs/activity/:activityId
 // @desc    Get time logged by activity
 // @access  Public
-router.get('activity/:activityId', async (req, res) => {
+router.get('/activity/:activityId', async (req, res) => {
     try {
         const logs = await ReportOfTimeSpent.find({ activityId: req.params.activityId });
         if (!logs) {
